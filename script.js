@@ -46,7 +46,6 @@ for (let i = 100; i <= 900; i = i + 200) {
       const diceRandomImg = Math.trunc(Math.random() * 6 + 1);
       diceImage.classList.add("show-dice-img");
       diceImage.src = `./images/dice-${diceRandomImg}.png`;
-      console.log(diceRandomImg);
     }, i);
   });
 }
