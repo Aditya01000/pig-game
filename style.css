@@ -1,0 +1,242 @@
+@import 'animate.css';
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid black; */
+}
+
+body {
+    /* background: url("./images/Webp.net-resizeimage.png"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Nunito", sans-serif;
+    user-select: none;
+}
+
+main {
+    min-height: 85vh;
+    max-height: 90vh;
+    min-width: 73.5vw;
+    max-width: 90vw;
+    display: flex;
+}
+
+section {
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+section .player-name-score {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+section .player-current-dice-score {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: auto;
+}
+
+.player1 {
+    background: rgba(219, 175, 188, 0.989);
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.player2 {
+    background: rgba(188, 122, 150, 0.989);
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.player-name-score .player-name {
+    font-size: 2.8rem;
+    font-weight: 700;
+    opacity: 0.65;
+    text-transform: uppercase;
+}
+
+.player-name-score .player-score {
+    font-size: 4.5rem;
+    font-weight: 500;
+    color: #c7365f;
+}
+
+.player-current-dice-score .player-current-dice-score-box {
+    background-color: #c7365f;
+    border-radius: 9px;
+    color: #fff;
+    padding: 0.5em 4rem;
+}
+
+.player-textContent-current {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.player-current-dice-score {
+    font-size: 2rem;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+.bg-class {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .bg-class {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .bg-class {
+        width: auto;
+        height: 100%;
+    }
+}
+
+.roll-dice-stuff {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 587px;
+    width: 250px;
+    z-index: 1;
+}
+
+.dice-image {
+    height: 120px;
+    width: 120px;
+    box-shadow: 0 2rem 3rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.new-game,
+.roll-dice,
+.hold {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 0.7em 1em;
+    border-radius: 9302px;
+    box-shadow: 0 2rem 3rem 1rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.new-game:active,
+.roll-dice:active,
+.hold:active {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+
+}
+
+.fa-arrows-rotate {
+    background: #4f6cf7;
+    color: white;
+    padding: 0.2em;
+    font-size: 1.6rem;
+}
+
+.textContent-newgame,
+.textContent-rolldice,
+.textContent-hold {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 500;
+
+}
+
+.fa-dice {
+    background-color: turquoise;
+    color: 003B4A;
+    padding: 0.2em;
+    font-size: 1.6rem;
+}
+
+.fa-circle-pause {
+    background-color: rgb(255, 247, 0);
+    color: black;
+    border-radius: 5000px;
+    border: 3px solid #F64329;
+    font-size: 1.9rem;
+}
+
+.hold {
+    justify-content: space-evenly;
+    width: 70%;
+}
+
+.player-current-dice-score-textContent {
+    text-align: center;
+}
+
+/* .enter-screen-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000000;
+  background-color: #3C2A48;
+  transition: 500ms all ease-in-out;
+}
+
+.enter-screen-box {
+  background-color: #B50010;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 230px;
+  padding: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.fa-circle-play {
+  font-size: 3rem;
+  color: #FEFEFF;
+}
+
+.textContent-enter-game {
+  font-size: 2rem;
+  color: #FEFEFF;
+} */

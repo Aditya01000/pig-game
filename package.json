@@ -1,0 +1,14 @@
+{
+  "name": "pig-game",
+  "version": "1.0.0",
+  "description": "Pig Game",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aditya",
+  "license": "MIT",
+  "dependencies": {
+    "animate.css": "^4.1.1"
+  }
+}

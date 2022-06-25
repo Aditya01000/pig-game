@@ -1,0 +1,7 @@
+.hide-dice-img {
+    transform: scale(0);
+}
+
+.show-dice-img {
+    transform: scale(1);
+}
