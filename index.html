@@ -77,8 +77,8 @@
 
             <div class="empty-divs" style="visibility:hidden ;"></div>
 
-            <div class="roll-dice">
-                <i class="fa-solid fa-dice"></i>
+            <div class="roll-dice" onclick="audio.play();">
+                <i class=" fa-solid fa-dice"></i>
                 <p class="textContent-rolldice">Roll Dice</p>
             </div>
 
@@ -116,6 +116,17 @@
             z-index: 9999 !important;
         }
     </style>
+
+
+
+
+    <script type="text/javascript">
+
+        const audio = new Audio();
+        audio.src = "./sound-clips/diceOnTableFallingSound.wav";
+
+    </script>
+
 </body>
 
 </html>
