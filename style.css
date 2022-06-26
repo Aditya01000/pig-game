@@ -30,6 +30,7 @@ main {
     min-width: 73.5vw;
     max-width: 90vw;
     display: flex;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 section {
@@ -61,13 +62,15 @@ section .player-current-dice-score {
     border-radius: 10px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+    transition: all 300ms ease-in-out;
 }
 
 .player2 {
-    background: rgba(188, 122, 150, 0.989);
+    background: rgba(196, 121, 141, 0.989);
     border-radius: 10px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    transition: all 300ms ease-in-out;
 }
 
 .player-name-score .player-name {
