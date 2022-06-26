@@ -160,12 +160,14 @@ section .player-current-dice-score {
     border-radius: 9302px;
     box-shadow: 0 2rem 3rem 1rem rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    transition: all 50ms ease-in-out;
 }
 
 .new-game:active,
 .roll-dice:active,
 .hold:active {
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
+    transform: translateY(1px);
 
 }
 
