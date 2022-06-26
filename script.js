@@ -48,8 +48,6 @@ for (let i = 100; i <= 900; i = i + 200) {
       diceImage.src = `./images/dice-${diceRandomImg}.png`;
     }, i);
   });
-  const audio = new Audio();
-  audio.src = "./sound-clips/diceOnTableFallingSound.wav";
 }
 
 /* run game screeen code
