@@ -154,13 +154,16 @@ section .player-current-dice-score {
     align-items: center;
     padding: 0;
     margin: 0;
-    width: 90%;
+    width: 75%;
+    max-width: 300px;
+    max-height: 50px;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 0.7em 1em;
     border-radius: 9302px;
     box-shadow: 0 2rem 3rem 1rem rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: all 50ms ease-in-out;
+    padding:0.8em 0.5em;
 }
 
 .new-game:active,
@@ -175,14 +178,14 @@ section .player-current-dice-score {
     background: #4f6cf7;
     color: white;
     padding: 0.2em;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
 
 .textContent-newgame,
 .textContent-rolldice,
 .textContent-hold {
     text-transform: uppercase;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 500;
 
 }
@@ -190,21 +193,21 @@ section .player-current-dice-score {
 .fa-dice {
     background-color: turquoise;
     color: 003B4A;
-    padding: 0.2em;
-    font-size: 1.6rem;
+    padding: 0.175em;
+    font-size: 1.4rem;
 }
 
 .fa-circle-pause {
-    background-color: rgb(255, 247, 0);
+    background-color:    rgb(225, 217, 0);
     color: black;
     border-radius: 5000px;
-    border: 3px solid #F64329;
-    font-size: 1.9rem;
+    /* border: 3px solid #F64329; */
+    font-size: 1.6rem;
 }
 
 .hold {
     justify-content: space-evenly;
-    width: 70%;
+    width: 50%;
 }
 
 .player-current-dice-score-textContent {

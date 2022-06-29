@@ -15,7 +15,6 @@ const player2CurrentScore = document.querySelector(
 );
 const rollDice = document.querySelector(".roll-dice");
 
-let currentScore = 0;
 
 // defining functions for long codes
 const playerSScores = function () {
@@ -43,6 +42,7 @@ diceImage.classList.add("hide-dice-img");
 
 // new game buttons functuality starts here!!!
 newGameBtn.addEventListener("click", () => {
+  activePlayer = 1;
   playerSScores();
   playerSCurrentScores();
   diceImage.classList.add("hide-dice-img");
@@ -52,7 +52,8 @@ newGameBtn.addEventListener("click", () => {
 });
 
 //roll dice functuality starts here
-
+let currentScore = 0;
+let activePlayer = 1;
 for (let i = 100; i <= 900; i = i + 200) {
   rollDice.addEventListener("click", () => {
     const diceRandomImg = Math.trunc(Math.random() * 6 + 1);
@@ -64,13 +65,18 @@ for (let i = 100; i <= 900; i = i + 200) {
       if (i === 900) {
         setTimeout(() => {
           currentScore += diceRandomImg;
-          player1CurrentScore.textContent = currentScore;
+          document.querySelector(`.player${activePlayer}-current-dice-score-textContent`).textContent = currentScore;
         }, 900);
       }
     } else {
+
+
       if (i === 900) {
         setTimeout(() => {
           invertedBgColorsOfBothPlayers();
+          document.querySelector(`.player${activePlayer}-current-dice-score-textContent`).textContent = Number(0);
+          activePlayer = activePlayer === 1 ? 2 : 1;
+          currentScore = 0;
         }, 900);
       }
     }
@@ -85,7 +91,7 @@ document.querySelector(".enter-screen-box").addEventListener("click", () => {
 
 */
 
-/* 
+/*
 
 hold functuality which was failed
 
