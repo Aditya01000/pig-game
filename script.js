@@ -26,14 +26,7 @@ const playerSCurrentScores = function () {
   player2CurrentScore.textContent = Number(0);
 };
 
-const BgColorsOfBothPlayers = function () {
-  player1Name.style.background = "rgba(219, 175, 188, 0.989)";
-  player2Name.style.background = "rgba(196, 121, 141, 0.989)";
-};
-const invertedBgColorsOfBothPlayers = function () {
-  player1Name.style.background = "rgba(196, 121, 141, 0.989)";
-  player2Name.style.background = "rgba(219, 175, 188, 0.989)";
-};
+
 
 // main functuality starts here
 playerSScores();
@@ -54,6 +47,7 @@ newGameBtn.addEventListener("click", () => {
 //roll dice functuality starts here
 let currentScore = 0;
 let activePlayer = 1;
+let unactivePlayer =2;
 for (let i = 100; i <= 900; i = i + 200) {
   rollDice.addEventListener("click", () => {
     const diceRandomImg = Math.trunc(Math.random() * 6 + 1);
@@ -69,6 +63,9 @@ for (let i = 100; i <= 900; i = i + 200) {
           currentScore += diceRandomImg;
           document.querySelector(`.player${activePlayer}-current-dice-score-textContent`).textContent = currentScore;
           
+          // document.querySelector(`.player${activePlayer}`).classList.add('active-color');
+          // document.querySelector(`.player${activePlayer}`).classList.remove('unactive-color');
+
         }, 900);
       }
     } else {
@@ -79,6 +76,17 @@ for (let i = 100; i <= 900; i = i + 200) {
           document.querySelector(`.player${activePlayer}-current-dice-score-textContent`).textContent = Number(0);
           activePlayer = activePlayer === 1 ? 2 : 1;
           currentScore = 0;
+          
+
+          unactivePlayer = unactivePlayer === 1 ? 2 : 1;
+
+          document.querySelector(`.player${unactivePlayer}`).classList.add('unactive-color');
+
+          document.querySelector(`.player${activePlayer}`).classList.add('active-color') ;
+          document.querySelector(`.player${activePlayer}`).classList.remove('unactive-color') ;
+          
+
+          console.log(unactivePlayer, activePlayer);
         }, 900);
       }
      
