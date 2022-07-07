@@ -58,7 +58,6 @@ section .player-current-dice-score {
 }
 
 .player1 {
-    background: rgba(219, 175, 188, 0.989);
     border-radius: 10px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -66,7 +65,9 @@ section .player-current-dice-score {
 }
 
 .player2 {
+    /* background: rgba(219, 175, 188, 0.989); */
     background: rgba(196, 121, 141, 0.989);
+
     border-radius: 10px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;

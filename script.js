@@ -61,11 +61,14 @@ for (let i = 100; i <= 900; i = i + 200) {
       diceImage.classList.add("show-dice-img");
       diceImage.src = `./images/dice-${diceRandomImg}.png`;
     }, i);
+    
     if (diceRandomImg !== 1) {
       if (i === 900) {
         setTimeout(() => {
+        
           currentScore += diceRandomImg;
           document.querySelector(`.player${activePlayer}-current-dice-score-textContent`).textContent = currentScore;
+          
         }, 900);
       }
     } else {
@@ -73,13 +76,14 @@ for (let i = 100; i <= 900; i = i + 200) {
 
       if (i === 900) {
         setTimeout(() => {
-          invertedBgColorsOfBothPlayers();
           document.querySelector(`.player${activePlayer}-current-dice-score-textContent`).textContent = Number(0);
           activePlayer = activePlayer === 1 ? 2 : 1;
           currentScore = 0;
         }, 900);
       }
+     
     }
+   
   });
 }
 /* run game screeen code

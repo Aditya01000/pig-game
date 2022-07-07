@@ -5,3 +5,9 @@
 .show-dice-img {
     transform: scale(1);
 }
+.active-color{
+    background: rgba(219, 175, 188, 0.989);
+}
+.unactive-color{
+    background: rgba(196, 121, 141, 0.989);
+}
