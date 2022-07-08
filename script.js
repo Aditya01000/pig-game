@@ -37,7 +37,6 @@ newGameBtn.addEventListener("click", () => {
   playerSCurrentScores();
   diceImage.classList.add("hide-dice-img");
   diceImage.classList.remove("show-dice-img");
-  BgColorsOfBothPlayers();
   currentScore = 0;
 });
 
