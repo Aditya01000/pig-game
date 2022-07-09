@@ -105,4 +105,3 @@ hold.addEventListener("click", () => {
 
 */
 // ok
-// lol
