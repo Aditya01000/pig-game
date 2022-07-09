@@ -55,36 +55,41 @@ for (let i = 100; i <= 900; i = i + 200) {
     if (diceRandomImg !== 1) {
       if (i === 900) {
         setTimeout(() => {
-
           currentScore += diceRandomImg;
-          document.querySelector(`.player${activePlayer}-current-dice-score-textContent`).textContent = currentScore;
+          document.querySelector(
+            `.player${activePlayer}-current-dice-score-textContent`
+          ).textContent = currentScore;
         }, 900);
       }
     } else {
       if (i === 900) {
         setTimeout(() => {
-          document.querySelector(`.player${activePlayer}-current-dice-score-textContent`).textContent = Number(0);
+          document.querySelector(
+            `.player${activePlayer}-current-dice-score-textContent`
+          ).textContent = Number(0);
           activePlayer = activePlayer === 1 ? 2 : 1;
           currentScore = 0;
 
-
           unactivePlayer = unactivePlayer === 1 ? 2 : 1;
 
-          document.querySelector(`.player${unactivePlayer}`).classList.add('unactive-color');
+          document
+            .querySelector(`.player${unactivePlayer}`)
+            .classList.add("unactive-color");
 
-          document.querySelector(`.player${activePlayer}`).classList.add('active-color');
-          document.querySelector(`.player${activePlayer}`).classList.remove('unactive-color');
+          document
+            .querySelector(`.player${activePlayer}`)
+            .classList.add("active-color");
+          document
+            .querySelector(`.player${activePlayer}`)
+            .classList.remove("unactive-color");
         }, 900);
       }
-
     }
-
   });
 }
 
-/* run game screeen code
-document.querySelector(".enter-screen-box").addEventListener("click", () => {
-  document.querySelector(".enter-screen-wrapper").style.opacity = "0";
-  document.querySelector(".enter-screen-wrapper").style.visibility = "hidden";
+$(window).on("load", function () {
+  setTimeout(() => {
+    $(".loader-wrapper").fadeOut("slow");
+  }, 1500);
 });
-*/

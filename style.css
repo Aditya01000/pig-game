@@ -163,7 +163,7 @@ section .player-current-dice-score {
     box-shadow: 0 2rem 3rem 1rem rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: all 50ms ease-in-out;
-    padding:0.8em 0.5em;
+    padding: 0.8em 0.5em;
 }
 
 .new-game:active,
@@ -198,7 +198,7 @@ section .player-current-dice-score {
 }
 
 .fa-circle-pause {
-    background-color:    rgb(225, 217, 0);
+    background-color: rgb(225, 217, 0);
     color: black;
     border-radius: 5000px;
     /* border: 3px solid #F64329; */
@@ -214,37 +214,79 @@ section .player-current-dice-score {
     text-align: center;
 }
 
-/* .enter-screen-wrapper {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000000;
-  background-color: #3C2A48;
-  transition: 500ms all ease-in-out;
+
+
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #242f3f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100000000000000000000000;
 }
 
-.enter-screen-box {
-  background-color: #B50010;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 230px;
-  padding: 1em;
-  cursor: pointer;
-  border-radius: 5px;
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    border: 4px solid #Fff;
+    animation: loader 2s infinite ease;
 }
 
-.fa-circle-play {
-  font-size: 3rem;
-  color: #FEFEFF;
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
 }
 
-.textContent-enter-game {
-  font-size: 2rem;
-  color: #FEFEFF;
-} */
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(180deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader-inner {
+    0% {
+        height: 0%;
+    }
+
+    25% {
+        height: 0%;
+    }
+
+    50% {
+        height: 100%;
+    }
+
+    75% {
+        height: 100%;
+    }
+
+    100% {
+        height: 0%;
+    }
+}
