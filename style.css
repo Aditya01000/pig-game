@@ -64,9 +64,7 @@ section .player-current-dice-score {
 }
 
 .player2 {
-    /* background: rgba(219, 175, 188, 0.989); */
     background: rgba(196, 121, 141, 0.989);
-
     border-radius: 10px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -75,7 +73,7 @@ section .player-current-dice-score {
 
 .player-name-score .player-name {
     font-size: 2.8rem;
-    font-weight: 700;
+    font-weight: 500;
     opacity: 0.65;
     text-transform: uppercase;
 }

@@ -46,7 +46,7 @@ let activePlayer = 1;
 let unactivePlayer = 2;
 for (let i = 100; i <= 900; i = i + 200) {
   rollDice.addEventListener("click", () => {
-    const diceRandomImg = Math.trunc(Math.random() * 6 + 1);
+    const diceRandomImg = Math.trunc(Math.random() * 2 + 1);
     setTimeout(() => {
       diceImage.classList.add("show-dice-img");
       diceImage.src = `./images/dice-${diceRandomImg}.png`;
