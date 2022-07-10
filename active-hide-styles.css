@@ -5,9 +5,21 @@
 .show-dice-img {
     transform: scale(1);
 }
-.active-color{
+
+.active-color {
     background: rgba(219, 175, 188, 0.989);
 }
-.unactive-color{
+
+.unactive-color {
     background: rgba(196, 121, 141, 0.989);
 }
+
+.active-player-name {
+    font-weight: 800;
+    opacity: 0.8;
+}
+
+/* .unactive-player-name {
+    font-weight: 800;
+    opacity: 0.8;
+} */
