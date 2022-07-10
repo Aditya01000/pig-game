@@ -91,5 +91,5 @@ for (let i = 100; i <= 900; i = i + 200) {
 $(window).on("load", function () {
   setTimeout(() => {
     $(".loader-wrapper").fadeOut("slow");
-  }, 1500);
+  }, 1);
 });
