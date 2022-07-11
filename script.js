@@ -43,7 +43,7 @@ newGameBtn.addEventListener("click", () => {
 //roll dice functuality starts here
 let currentScore = 0;
 let activePlayer = 1;
-let unactivePlayer = 2;
+
 for (let i = 100; i <= 900; i = i + 200) {
   rollDice.addEventListener("click", () => {
     const diceRandomImg = Math.trunc(Math.random() * 2 + 1);
@@ -70,18 +70,10 @@ for (let i = 100; i <= 900; i = i + 200) {
           activePlayer = activePlayer === 1 ? 2 : 1;
           currentScore = 0;
 
-          unactivePlayer = unactivePlayer === 1 ? 2 : 1;
-
-          document
-            .querySelector(`.player${unactivePlayer}`)
-            .classList.add("unactive-color");
-
-          document
-            .querySelector(`.player${activePlayer}`)
-            .classList.add("active-color");
-          document
-            .querySelector(`.player${activePlayer}`)
-            .classList.remove("unactive-color");
+          player1Name.classList.toggle("unactive-color");
+          player2Name.classList.toggle("unactive-color");
+          player2Name.classList.toggle("active-color");
+          player1Name.classList.toggle("active-color");
         }, 900);
       }
     }

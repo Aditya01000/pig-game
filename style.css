@@ -1,290 +1,287 @@
-@import 'animate.css';
+@import "animate.css";
 
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
 *,
 *::after,
 *::before {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    /* outline: 1px solid black; */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid black; */
 }
 
 body {
-    /* background: url("./images/Webp.net-resizeimage.png"); */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Nunito", sans-serif;
-    user-select: none;
+  /* background: url("./images/Webp.net-resizeimage.png"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Nunito", sans-serif;
+  user-select: none;
 }
 
 main {
-    height: 36.7rem;
-    min-width: 73.5vw;
-    max-width: 90vw;
-    display: flex;
-    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  height: 36.7rem;
+  min-width: 73.5vw;
+  max-width: 90vw;
+  display: flex;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 section {
-    flex: 50%;
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
 }
 
 section .player-name-score {
-    display: flex;
-    flex-direction: column;
-    height: 50%;
-    justify-content: space-evenly;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 section .player-current-dice-score {
-    display: flex;
-    flex-direction: column;
-    height: 50%;
-    justify-content: space-evenly;
-    align-items: center;
-    cursor: auto;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: auto;
 }
 
 .player1 {
-    border-radius: 10px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    transition: all 300ms ease-in-out;
+  border-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  transition: all 300ms ease-in-out;
 }
 
 .player2 {
-    background: rgba(196, 121, 141, 0.989);
-    border-radius: 10px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    transition: all 300ms ease-in-out;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  transition: all 300ms ease-in-out;
 }
 
 .player-name-score .player-name {
-    font-size: 2.8rem;
-    font-weight: 500;
-    opacity: 0.65;
-    text-transform: uppercase;
+  font-size: 2.8rem;
+  font-weight: 500;
+  opacity: 0.65;
+  text-transform: uppercase;
 }
 
 .player-name-score .player-score {
-    font-size: 4.5rem;
-    font-weight: 500;
-    color: #c7365f;
+  font-size: 4.5rem;
+  font-weight: 500;
+  color: #c7365f;
 }
 
 .player-current-dice-score .player-current-dice-score-box {
-    background-color: #c7365f;
-    border-radius: 9px;
-    color: #fff;
-    padding: 0.5em 4rem;
+  background-color: #c7365f;
+  border-radius: 9px;
+  color: #fff;
+  padding: 0.5em 4rem;
 }
 
 .player-textContent-current {
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    opacity: 0.8;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  opacity: 0.8;
 }
 
 .player-current-dice-score {
-    font-size: 2rem;
-    text-transform: uppercase;
-    opacity: 0.9;
+  font-size: 2rem;
+  text-transform: uppercase;
+  opacity: 0.9;
 }
 
 .bg-class {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
 @media (min-aspect-ratio: 16/9) {
-    .bg-class {
-        width: 100%;
-        height: auto;
-    }
+  .bg-class {
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media (max-aspect-ratio: 16/9) {
-    .bg-class {
-        width: auto;
-        height: 100%;
-    }
+  .bg-class {
+    width: auto;
+    height: 100%;
+  }
 }
 
 .roll-dice-stuff {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 587px;
-    width: 250px;
-    z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 587px;
+  width: 250px;
+  z-index: 1;
 }
 
 .dice-image {
-    height: 120px;
-    width: 120px;
-    box-shadow: 0 2rem 3rem 1rem rgba(0, 0, 0, 0.1);
+  height: 120px;
+  width: 120px;
+  box-shadow: 0 2rem 3rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 .new-game,
 .roll-dice,
 .hold {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    width: 75%;
-    max-width: 300px;
-    max-height: 50px;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 0.7em 1em;
-    border-radius: 9302px;
-    box-shadow: 0 2rem 3rem 1rem rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: all 50ms ease-in-out;
-    padding: 0.8em 0.5em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  width: 75%;
+  max-width: 300px;
+  max-height: 50px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0.7em 1em;
+  border-radius: 9302px;
+  box-shadow: 0 2rem 3rem 1rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 50ms ease-in-out;
+  padding: 0.8em 0.5em;
 }
 
 .new-game:active,
 .roll-dice:active,
 .hold:active {
-    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
-    transform: translateY(1px);
-
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
+  transform: translateY(1px);
 }
 
 .fa-arrows-rotate {
-    background: #4f6cf7;
-    color: white;
-    padding: 0.2em;
-    font-size: 1.4rem;
+  background: #4f6cf7;
+  color: white;
+  padding: 0.2em;
+  font-size: 1.4rem;
 }
 
 .textContent-newgame,
 .textContent-rolldice,
 .textContent-hold {
-    text-transform: uppercase;
-    font-size: 1.4rem;
-    font-weight: 500;
-
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 500;
 }
 
 .fa-dice {
-    background-color: turquoise;
-    color: 003B4A;
-    padding: 0.175em;
-    font-size: 1.4rem;
+  background-color: turquoise;
+  color: 003B4A;
+  padding: 0.175em;
+  font-size: 1.4rem;
 }
 
 .fa-circle-pause {
-    background-color: rgb(225, 217, 0);
-    color: black;
-    border-radius: 5000px;
-    /* border: 3px solid #F64329; */
-    font-size: 1.6rem;
+  background-color: rgb(225, 217, 0);
+  color: black;
+  border-radius: 5000px;
+  /* border: 3px solid #F64329; */
+  font-size: 1.6rem;
 }
 
 .hold {
-    justify-content: space-evenly;
-    width: 50%;
+  justify-content: space-evenly;
+  width: 50%;
 }
 
 .player-current-dice-score-textContent {
-    text-align: center;
+  text-align: center;
 }
 
-
-
 .loader-wrapper {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #242f3f;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100000000000000000000000;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #242f3f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100000000000000000000000;
 }
 
 .loader {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    top: 50%;
-    left: 50%;
-    border: 4px solid #Fff;
-    animation: loader 2s infinite ease;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  left: 50%;
+  border: 4px solid #fff;
+  animation: loader 2s infinite ease;
 }
 
 .loader-inner {
-    vertical-align: top;
-    display: inline-block;
-    width: 100%;
-    background-color: #fff;
-    animation: loader-inner 2s infinite ease-in;
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
 }
 
 @keyframes loader {
-    0% {
-        transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
 
-    25% {
-        transform: rotate(180deg);
-    }
+  25% {
+    transform: rotate(180deg);
+  }
 
-    50% {
-        transform: rotate(180deg);
-    }
+  50% {
+    transform: rotate(180deg);
+  }
 
-    75% {
-        transform: rotate(360deg);
-    }
+  75% {
+    transform: rotate(360deg);
+  }
 
-    100% {
-        transform: rotate(360deg);
-    }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes loader-inner {
-    0% {
-        height: 0%;
-    }
+  0% {
+    height: 0%;
+  }
 
-    25% {
-        height: 0%;
-    }
+  25% {
+    height: 0%;
+  }
 
-    50% {
-        height: 100%;
-    }
+  50% {
+    height: 100%;
+  }
 
-    75% {
-        height: 100%;
-    }
+  75% {
+    height: 100%;
+  }
 
-    100% {
-        height: 0%;
-    }
+  100% {
+    height: 0%;
+  }
 }
