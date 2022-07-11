@@ -1,22 +1,22 @@
 .hide-dice-img {
-    transform: scale(0);
+  transform: scale(0);
 }
 
 .show-dice-img {
-    transform: scale(1);
+  transform: scale(1);
 }
 
 .active-color {
-    background: rgba(219, 175, 188, 0.989);
+  background: rgba(219, 175, 188, 0.989);
 }
 
 .unactive-color {
-    background: rgba(196, 121, 141, 0.989);
+  background: rgba(196, 121, 141, 0.989);
 }
 
 .active-player-name {
-    font-weight: 800;
-    opacity: 0.8;
+  font-weight: 800;
+  opacity: 0.8;
 }
 
 /* .unactive-player-name {
