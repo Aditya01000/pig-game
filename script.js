@@ -3,8 +3,8 @@
 const player1Score = document.querySelector(".player2-score");
 const player2Score = document.querySelector(".player1-score");
 const hold = document.querySelector(".hold");
-const player1Name = document.querySelector(".player1");
-const player2Name = document.querySelector(".player2");
+const player1Bg = document.querySelector(".player1");
+const player2Bg = document.querySelector(".player2");
 const newGameBtn = document.querySelector(".new-game");
 const diceImage = document.querySelector(".dice-image");
 const player1CurrentScore = document.querySelector(
@@ -14,7 +14,8 @@ const player2CurrentScore = document.querySelector(
   ".player2-current-dice-score-textContent"
 );
 const rollDice = document.querySelector(".roll-dice");
-
+const player1Name = document.querySelector(".active-player-name");
+const player2Name = document.querySelector(".unactive-player-name");
 // defining functions for long codes
 const playerSScores = function () {
   player1Score.textContent = Number(0);
@@ -70,10 +71,15 @@ for (let i = 100; i <= 900; i = i + 200) {
           activePlayer = activePlayer === 1 ? 2 : 1;
           currentScore = 0;
 
-          player1Name.classList.toggle("unactive-color");
-          player2Name.classList.toggle("unactive-color");
-          player2Name.classList.toggle("active-color");
-          player1Name.classList.toggle("active-color");
+          player1Bg.classList.toggle("unactive-color");
+          player1Bg.classList.toggle("active-color");
+          player2Bg.classList.toggle("unactive-color");
+          player2Bg.classList.toggle("active-color");
+
+          player1Name.classList.toggle("active-player-name");
+          player1Name.classList.toggle("unactive-player-name");
+          player2Name.classList.toggle("active-player-name");
+          player2Name.classList.toggle("unactive-player-name");
         }, 900);
       }
     }

@@ -74,8 +74,8 @@ section .player-current-dice-score {
 
 .player-name-score .player-name {
   font-size: 2.8rem;
-  font-weight: 500;
-  opacity: 0.65;
+  /* font-weight: 500; */
+  /* opacity: 0.65; */
   text-transform: uppercase;
 }
 

@@ -16,10 +16,10 @@
 
 .active-player-name {
   font-weight: 800;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
-/* .unactive-player-name {
-    font-weight: 800;
-    opacity: 0.8;
-} */
+.unactive-player-name {
+  font-weight: 500;
+  opacity: 0.55;
+}
