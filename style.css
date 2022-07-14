@@ -104,26 +104,27 @@ section .player-current-dice-score {
   opacity: 0.9;
 }
 
-.bg-class {
+/*
+.bg-video {
   position: absolute;
   right: 0;
   bottom: 0;
   z-index: -1;
 }
 
-@media (min-aspect-ratio: 16/9) {
-  .bg-class {
+ @media (min-aspect-ratio: 16/9) {
+  .bg-video {
     width: 100%;
     height: auto;
   }
 }
 
 @media (max-aspect-ratio: 16/9) {
-  .bg-class {
+  .bg-video {
     width: auto;
     height: 100%;
   }
-}
+} */
 
 .roll-dice-stuff {
   position: absolute;

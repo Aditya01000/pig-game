@@ -1,7 +1,7 @@
 "use strict";
 // defining var and const values
-const player1Score = document.querySelector(".player2-score");
-const player2Score = document.querySelector(".player1-score");
+let player1Score = document.querySelector(".player2-score");
+let player2Score = document.querySelector(".player1-score");
 const hold = document.querySelector(".hold");
 const player1Bg = document.querySelector(".player1");
 const player2Bg = document.querySelector(".player2");
@@ -47,7 +47,7 @@ let activePlayer = 1;
 
 for (let i = 100; i <= 900; i = i + 200) {
   rollDice.addEventListener("click", () => {
-    const diceRandomImg = Math.trunc(Math.random() * 2 + 1);
+    const diceRandomImg = Math.trunc(Math.random() * 3 + 1);
     setTimeout(() => {
       diceImage.classList.add("show-dice-img");
       diceImage.src = `./images/dice-${diceRandomImg}.png`;
@@ -64,13 +64,13 @@ for (let i = 100; i <= 900; i = i + 200) {
       }
     } else {
       if (i === 900) {
+        player1Score = currentScore;
         setTimeout(() => {
           document.querySelector(
             `.player${activePlayer}-current-dice-score-textContent`
           ).textContent = Number(0);
           activePlayer = activePlayer === 1 ? 2 : 1;
           currentScore = 0;
-
           player1Bg.classList.toggle("unactive-color");
           player1Bg.classList.toggle("active-color");
           player2Bg.classList.toggle("unactive-color");
