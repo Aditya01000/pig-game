@@ -1,7 +1,7 @@
 "use strict";
 // defining var and const values
-let player1Score = document.querySelector(".player2-score");
-let player2Score = document.querySelector(".player1-score");
+let player1Score = document.querySelector(".player1-score");
+let player2Score = document.querySelector(".player2-score");
 const hold = document.querySelector(".hold");
 const player1Bg = document.querySelector(".player1");
 const player2Bg = document.querySelector(".player2");
@@ -85,6 +85,11 @@ for (let i = 100; i <= 900; i = i + 200) {
     }
   });
 }
+
+let playerScore = 0;
+hold.addEventListener("click", () => {
+  // document.querySelector(`player${activePlayer}-score`)= player
+});
 
 // $(window).on("load", function () {
 //   setTimeout(() => {
