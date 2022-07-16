@@ -25,7 +25,22 @@ const playerSCurrentScores = function () {
   player1CurrentScore.textContent = Number(0);
   player2CurrentScore.textContent = Number(0);
 };
+const switchPlayer = () => {
+  document.querySelector(
+    `.player${activePlayer}-current-dice-score-textContent`
+  ).textContent = Number(0);
+  activePlayer = activePlayer === 1 ? 2 : 1;
+  currentScore = 0;
+  player1Bg.classList.toggle("unactive-color");
+  player1Bg.classList.toggle("active-color");
+  player2Bg.classList.toggle("unactive-color");
+  player2Bg.classList.toggle("active-color");
 
+  player1Name.classList.toggle("active-player-name");
+  player1Name.classList.toggle("unactive-player-name");
+  player2Name.classList.toggle("active-player-name");
+  player2Name.classList.toggle("unactive-player-name");
+};
 // main functuality starts here
 playerSScores();
 playerSCurrentScores();
@@ -44,7 +59,8 @@ newGameBtn.addEventListener("click", () => {
 //roll dice functuality starts here
 let currentScore = 0;
 let activePlayer = 1;
-
+let unactivePlayer = 1;
+let bigScore = 0;
 for (let i = 100; i <= 900; i = i + 200) {
   rollDice.addEventListener("click", () => {
     const diceRandomImg = Math.trunc(Math.random() * 3 + 1);
@@ -64,31 +80,16 @@ for (let i = 100; i <= 900; i = i + 200) {
       }
     } else {
       if (i === 900) {
-        player1Score = currentScore;
         setTimeout(() => {
-          document.querySelector(
-            `.player${activePlayer}-current-dice-score-textContent`
-          ).textContent = Number(0);
-          activePlayer = activePlayer === 1 ? 2 : 1;
-          currentScore = 0;
-          player1Bg.classList.toggle("unactive-color");
-          player1Bg.classList.toggle("active-color");
-          player2Bg.classList.toggle("unactive-color");
-          player2Bg.classList.toggle("active-color");
-
-          player1Name.classList.toggle("active-player-name");
-          player1Name.classList.toggle("unactive-player-name");
-          player2Name.classList.toggle("active-player-name");
-          player2Name.classList.toggle("unactive-player-name");
+          switchPlayer();
         }, 900);
       }
     }
   });
 }
 
-let playerScore = 0;
 hold.addEventListener("click", () => {
-  // document.querySelector(`player${activePlayer}-score`)= player
+  switchPlayer();
 });
 
 // $(window).on("load", function () {
