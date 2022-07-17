@@ -59,37 +59,50 @@ newGameBtn.addEventListener("click", () => {
 //roll dice functuality starts here
 let currentScore = 0;
 let activePlayer = 1;
-let unactivePlayer = 1;
-let bigScore = 0;
+let scores = [0, 0];
+let playing = true;
 for (let i = 100; i <= 900; i = i + 200) {
   rollDice.addEventListener("click", () => {
-    const diceRandomImg = Math.trunc(Math.random() * 3 + 1);
-    setTimeout(() => {
-      diceImage.classList.add("show-dice-img");
-      diceImage.src = `./images/dice-${diceRandomImg}.png`;
-    }, i);
+    if (playing) {
+      const diceRandomImg = Math.trunc(Math.random() * 3 + 1);
+      setTimeout(() => {
+        diceImage.classList.add("show-dice-img");
+        diceImage.src = `./images/dice-${diceRandomImg}.png`;
+      }, i);
 
-    if (diceRandomImg !== 1) {
-      if (i === 900) {
-        setTimeout(() => {
-          currentScore += diceRandomImg;
-          document.querySelector(
-            `.player${activePlayer}-current-dice-score-textContent`
-          ).textContent = currentScore;
-        }, 900);
-      }
-    } else {
-      if (i === 900) {
-        setTimeout(() => {
-          switchPlayer();
-        }, 900);
+      if (diceRandomImg !== 1) {
+        if (i === 900) {
+          setTimeout(() => {
+            currentScore += diceRandomImg;
+            document.querySelector(
+              `.player${activePlayer}-current-dice-score-textContent`
+            ).textContent = currentScore;
+          }, 900);
+        }
+      } else {
+        if (i === 900) {
+          setTimeout(() => {
+            switchPlayer();
+          }, 900);
+        }
       }
     }
   });
 }
 
 hold.addEventListener("click", () => {
-  switchPlayer();
+  if (playing) {
+    scores[activePlayer - 1] += currentScore;
+
+    document.querySelector(`.player${activePlayer}-score`).textContent =
+      scores[activePlayer - 1];
+    if (scores[activePlayer - 1] >= 5) {
+      playing = false;
+      console.log("lmao LOLOLOLOL xdddd");
+    } else {
+      switchPlayer();
+    }
+  }
 });
 
 // $(window).on("load", function () {

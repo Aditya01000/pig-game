@@ -12,7 +12,7 @@
 }
 
 body {
-  /* background: url("./images/Webp.net-resizeimage.png"); */
+  background: url("./images/Webp.net-resizeimage.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -104,7 +104,7 @@ section .player-current-dice-score {
   opacity: 0.9;
 }
 
-/*
+
 .bg-video {
   position: absolute;
   right: 0;
@@ -112,7 +112,7 @@ section .player-current-dice-score {
   z-index: -1;
 }
 
- @media (min-aspect-ratio: 16/9) {
+@media (min-aspect-ratio: 16/9) {
   .bg-video {
     width: 100%;
     height: auto;
@@ -124,7 +124,7 @@ section .player-current-dice-score {
     width: auto;
     height: 100%;
   }
-} */
+}
 
 .roll-dice-stuff {
   position: absolute;
