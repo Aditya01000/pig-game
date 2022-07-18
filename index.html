@@ -12,6 +12,7 @@
 
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="active-hide-styles.css" />
+  <link rel="stylesheet" href="winner-style.css" />
 
   <script src="script.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -100,21 +101,47 @@
     </section>
     <!-- section 2 ends here 🚫🚫🚫🚫 -->
   </main>
-  <!-- <script src="https://axorax.github.io/support/sideDonateBadge.js" defer></script>
+
+  <!-- modal functiality starts here -->
+
+  <div data-modal-container class="modal-container">
+    <div class="modal hidden">
+      <div class="modal-header">
+        <div class="title">Congratulation Player 1</div>
+      </div>
+      <div class="modal-body">
+        <a target="_blank" href="https://www.youtube.com/watch?v=YpMV3VMuL8A">
+          <img class="rick-roll-img" src="./project-gifs/rick and roll gif" alt="gif" width="300px" />
+        </a>
+        <img src="./project-gifs/thumbsup-gif" alt="gif" />
+
+      </div>
+      <div class="rick-roll">
+        <div class="title rick-roll-title">But here u are rick rolled</div>
+        <div class="lol-face">
+          <img src="./project-gifs/troll-face" alt="" width="50px">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal functiality ends here -->
+
+  <script src="https://axorax.github.io/support/sideDonateBadge.js" defer></script>
   <style defer>
     #axoSideDonateMainDivContainer {
       bottom: 50vh !important;
       z-index: 9999 !important;
     }
-  </style> -->
+  </style>
 
-  <!-- <script type="text/javascript">
+  <script type="text/javascript">
     const audioDiceFall = new Audio();
     audioDiceFall.src = "./sound-clips/diceOnTableFallingSound.wav";
 
     const audioNewGame = new Audio();
-    audioNewGame.src = "./sound-clips/new game button sound effect.wav";
-  </script> -->
+    audioNewGame.src = "/home/aditya/Documents/pig-game/sound-clips/new game button sound effect.wav";
+  </script>
 </body>
 
 </html>

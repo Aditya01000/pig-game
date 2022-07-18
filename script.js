@@ -96,9 +96,29 @@ hold.addEventListener("click", () => {
 
     document.querySelector(`.player${activePlayer}-score`).textContent =
       scores[activePlayer - 1];
-    if (scores[activePlayer - 1] >= 5) {
+    if (scores[activePlayer - 1] >= 1) {
       playing = false;
-      console.log("lmao LOLOLOLOL xdddd");
+
+      ("use strict");
+      const modalContainer = document.querySelector("[data-modal-container]");
+
+      const closeModal = function () {
+        modalContainer.classList.remove("show");
+      };
+      const openModal = function () {
+        modalContainer.classList.add("show");
+      };
+
+      modalContainer.classList.add("show");
+
+      modalContainer.addEventListener("click", (e) => {
+        if (e.target !== modalContainer) return;
+        closeModal();
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeModal();
+      });
     } else {
       switchPlayer();
     }
