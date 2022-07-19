@@ -31,7 +31,7 @@
 }
 
 .modal-container.show .modal-header {
-    animation: title 500ms ease-in-out;
+    animation: title 1000ms ease-in-out;
 }
 
 .modal {

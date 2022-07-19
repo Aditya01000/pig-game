@@ -99,7 +99,6 @@ hold.addEventListener("click", () => {
     if (scores[activePlayer - 1] >= 1) {
       playing = false;
 
-      ("use strict");
       const modalContainer = document.querySelector("[data-modal-container]");
 
       const closeModal = function () {
@@ -110,6 +109,9 @@ hold.addEventListener("click", () => {
       };
 
       modalContainer.classList.add("show");
+      document.querySelector(
+        `.player${activePlayer}-name`
+      ).textContent = `Congratulations Player${activePlayer}`;
 
       modalContainer.addEventListener("click", (e) => {
         if (e.target !== modalContainer) return;
@@ -130,3 +132,4 @@ hold.addEventListener("click", () => {
 //     $(".loader-wrapper").fadeOut("slow");
 //   }, 1);
 // });
+console.log(activePlayer);
