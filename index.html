@@ -114,16 +114,20 @@
           <img class="rick-roll-img" src="./project-gifs/rick and roll gif" alt="gif" width="300px" />
         </a>
         <img src="./project-gifs/thumbsup-gif" alt="gif" />
-
       </div>
       <div class="rick-roll">
         <div class="lol-face">
-          <img src="./project-gifs/troll-face" alt="" width="50px">
+          <img src="./project-gifs/troll-face" alt="" width="50px" />
         </div>
-        <div class="title rick-roll-title">But here u are <span style="color: gold;">rick rolled</span></div>
+        <div class="title rick-roll-title">
+          But here u are <span style="color: gold">rick rolled</span>
+        </div>
         <div class="lol-face">
-          <img src="./project-gifs/troll-face" alt="" width="50px">
+          <img src="./project-gifs/troll-face" alt="" width="50px" />
         </div>
+      </div>
+      <div class="rick-roll-new-game-btn" onclick="audioNewGame.play();">
+        <a class="flooper-btn" href="javascript:void(0);"></a>
       </div>
     </div>
   </div>
@@ -143,7 +147,8 @@
     audioDiceFall.src = "./sound-clips/diceOnTableFallingSound.wav";
 
     const audioNewGame = new Audio();
-    audioNewGame.src = "/home/aditya/Documents/pig-game/sound-clips/new game button sound effect.wav";
+    audioNewGame.src =
+      "/home/aditya/Documents/pig-game/sound-clips/new game button sound effect.wav";
   </script>
 </body>
 

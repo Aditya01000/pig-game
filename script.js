@@ -109,8 +109,9 @@ hold.addEventListener("click", () => {
       };
 
       modalContainer.classList.add("show");
+
       document.querySelector(
-        `.player${activePlayer}-name`
+        `.title`
       ).textContent = `Congratulations Player${activePlayer}`;
 
       modalContainer.addEventListener("click", (e) => {
@@ -132,4 +133,3 @@ hold.addEventListener("click", () => {
 //     $(".loader-wrapper").fadeOut("slow");
 //   }, 1);
 // });
-console.log(activePlayer);

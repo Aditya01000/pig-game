@@ -165,6 +165,8 @@ section .player-current-dice-score {
   padding: 0.8em 0.5em;
 }
 
+
+
 .new-game:active,
 .roll-dice:active,
 .hold:active {
