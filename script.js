@@ -98,6 +98,10 @@ hold.addEventListener("click", () => {
       scores[activePlayer - 1];
     if (scores[activePlayer - 1] >= 1) {
       playing = false;
+      document.querySelector(".new-game").removeAttribute("onclick");
+      document.querySelector(".roll-dice").removeAttribute("onclick");
+
+      document.querySelector(".dice-images").style.visibility = "hidden";
 
       const modalContainer = document.querySelector("[data-modal-container]");
 
@@ -131,5 +135,5 @@ hold.addEventListener("click", () => {
 // $(window).on("load", function () {
 //   setTimeout(() => {
 //     $(".loader-wrapper").fadeOut("slow");
-//   }, 1);
+//   }, 1000);
 // });

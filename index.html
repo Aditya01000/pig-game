@@ -53,7 +53,7 @@
     <div class="roll-dice-stuff">
       <div class="empty-divs" style="visibility: hidden"></div>
 
-      <div class="new-game" onclick="audioNewGame.play();">
+      <div class="new-game">
         <i class="fa-solid fa-arrows-rotate"></i>
         <p class="textContent-newgame">New Game</p>
       </div>
@@ -143,12 +143,12 @@
   </style>
 
   <script type="text/javascript">
-    const audioDiceFall = new Audio();
+    let audioDiceFall = new Audio();
     audioDiceFall.src = "./sound-clips/diceOnTableFallingSound.wav";
 
-    const audioNewGame = new Audio();
+    let audioNewGame = new Audio();
     audioNewGame.src =
-      "/home/aditya/Documents/pig-game/sound-clips/new game button sound effect.wav";
+      "./sound-clips/new game button sound effect.wav";
   </script>
 </body>
 
