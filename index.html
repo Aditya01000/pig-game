@@ -53,7 +53,7 @@
     <div class="roll-dice-stuff">
       <div class="empty-divs" style="visibility: hidden"></div>
 
-      <div class="new-game">
+      <div class="new-game" onclick="audioNewGame.play();">
         <i class="fa-solid fa-arrows-rotate"></i>
         <p class="textContent-newgame">New Game</p>
       </div>
@@ -72,7 +72,7 @@
         <p class="textContent-rolldice">Roll Dice</p>
       </div>
 
-      <div class="hold">
+      <div class="hold" onclick="audioDiceHold.play();">
         <i class="fa-solid fa-circle-pause"></i>
         <p class="textContent-hold">Hold</p>
       </div>
@@ -141,14 +141,16 @@
       z-index: 9999 !important;
     }
   </style>
-
+  <!-- <img src="./sound-clips/new game sound.mp3" alt=""> -->
   <script type="text/javascript">
     let audioDiceFall = new Audio();
     audioDiceFall.src = "./sound-clips/diceOnTableFallingSound.wav";
 
+    let audioDiceHold = new Audio();
+    audioDiceHold.src = "./sound-clips/hold dice.mp3";
+
     let audioNewGame = new Audio();
-    audioNewGame.src =
-      "./sound-clips/new game button sound effect.wav";
+    audioNewGame.src = "./sound-clips/new game sound.mp3";
   </script>
 </body>
 

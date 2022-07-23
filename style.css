@@ -287,3 +287,17 @@ section .player-current-dice-score {
     height: 0%;
   }
 } */
+
+main {
+  animation: game-loading 500ms ease-in-out 0ms;
+}
+
+@keyframes game-loading {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

@@ -100,6 +100,7 @@ hold.addEventListener("click", () => {
       playing = false;
       document.querySelector(".new-game").removeAttribute("onclick");
       document.querySelector(".roll-dice").removeAttribute("onclick");
+      document.querySelector(".hold").removeAttribute("onclick");
 
       document.querySelector(".dice-images").style.visibility = "hidden";
 
