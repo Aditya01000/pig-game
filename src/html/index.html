@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="./node_modules/animate.css/animate.css" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LOL</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="active-hide-styles.css" />
+  <link rel="stylesheet" href="winner-style.css" />
+
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!-- <div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+  </div> -->
+
+  <video autoplay loop muted plays-inline class="bg-video">
+    <source src="./game-bg-clip/pig-game-bg-video.HTML5" type="video/mp4" />
+  </video>
+  <main>
+    <!-- section 1 starts here 1️⃣1️⃣1️⃣1️⃣ -->
+    <section class="player1 section1 active-color">
+      <div class="player1-name-score player-name-score">
+        <p></p>
+        <p class="player1-name player-name active-player-name">Player 1</p>
+        <p class="player1-score player-score">0</p>
+      </div>
+
+      <div class="player1-current-dice-score player-current-dice-score">
+        <div class="player1-current-dice-score-box player-current-dice-score-box">
+          <p class="player1-textContent-current player-textContent-current">
+            Current
+          </p>
+          <p class="player1-current-dice-score-textContent player-current-dice-score-textContent">
+            0
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- section 1 ends here 🚫🚫🚫🚫 -->
+
+    <div class="roll-dice-stuff">
+      <div class="empty-divs" style="visibility: hidden"></div>
+
+      <div class="new-game" onclick="audioNewGame.play();">
+        <i class="fa-solid fa-arrows-rotate"></i>
+        <p class="textContent-newgame">New Game</p>
+      </div>
+
+      <div class="empty-divs" style="visibility: hidden"></div>
+      <div class="empty-divs" style="visibility: hidden"></div>
+
+      <div class="dice-images">
+        <img src="./images/dice-5.png" alt="dice-image" class="dice-image" />
+      </div>
+
+      <div class="empty-divs" style="visibility: hidden"></div>
+
+      <div class="roll-dice" onclick="audioDiceFall.play();">
+        <i class="fa-solid fa-dice"></i>
+        <p class="textContent-rolldice">Roll Dice</p>
+      </div>
+
+      <div class="hold" onclick="audioDiceHold.play();">
+        <i class="fa-solid fa-circle-pause"></i>
+        <p class="textContent-hold">Hold</p>
+      </div>
+
+      <div class="empty-divs" style="visibility: hidden"></div>
+    </div>
+
+    <!-- section 2 starts here 1️⃣1️⃣1️⃣1️⃣ -->
+    <section class="player2 section2 unactive-color">
+      <div class="player2-name-score player-name-score">
+        <p></p>
+        <p class="player2-name player-name unactive-player-name">Player 2</p>
+        <p class="player2-score player-score">0</p>
+      </div>
+
+      <div class="player2-current-dice-score player-current-dice-score">
+        <div class="player2-current-dice-score-box player-current-dice-score-box">
+          <p class="player2-textContent-current player-textContent-current">
+            Current
+          </p>
+          <p class="player2-current-dice-score-textContent player-current-dice-score-textContent">
+            0
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- section 2 ends here 🚫🚫🚫🚫 -->
+  </main>
+
+  <!-- modal functiality starts here -->
+
+  <div data-modal-container class="modal-container">
+    <div class="modal hidden">
+      <div class="modal-header">
+        <div class="title">Congratulation Player 1</div>
+      </div>
+      <div class="modal-body">
+        <a target="_blank" href="https://www.youtube.com/watch?v=YpMV3VMuL8A">
+          <img class="rick-roll-img" src="./project-gifs/rick and roll gif" alt="gif" width="300px" />
+        </a>
+        <img src="./project-gifs/thumbsup-gif" alt="gif" />
+      </div>
+      <div class="rick-roll">
+        <div class="lol-face">
+          <img src="./project-gifs/troll-face" alt="" width="50px" />
+        </div>
+        <div class="title rick-roll-title">
+          But here u are <span style="color: gold">rick rolled</span>
+        </div>
+        <div class="lol-face">
+          <img src="./project-gifs/troll-face" alt="" width="50px" />
+        </div>
+      </div>
+      <div class="rick-roll-new-game-btn" onclick="audioNewGame.play();">
+        <a class="flooper-btn" href="javascript:void(0);"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal functiality ends here -->
+
+  <script src="https://axorax.github.io/support/sideDonateBadge.js" defer></script>
+  <style defer>
+    #axoSideDonateMainDivContainer {
+      bottom: 50vh !important;
+      z-index: 9999 !important;
+    }
+  </style>
+  <!-- <img src="./sound-clips/new game sound.mp3" alt=""> -->
+  <script type="text/javascript">
+    let audioDiceFall = new Audio();
+    audioDiceFall.src = "./sound-clips/diceOnTableFallingSound.wav";
+
+    let audioDiceHold = new Audio();
+    audioDiceHold.src = "./sound-clips/hold dice.mp3";
+
+    let audioNewGame = new Audio();
+    audioNewGame.src = "./sound-clips/new game sound.mp3";
+  </script>
+</body>
+
+</html>
