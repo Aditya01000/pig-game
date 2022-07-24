@@ -138,10 +138,6 @@ div.modal-container div.rick-roll {
   max-height: 50px;
 }
 
-/* .mr-hide {
-  opacity: 0;
-} */
-
 .flooper-btn {
   position: relative;
   width: 200px;
@@ -223,3 +219,7 @@ div.modal-container div.rick-roll {
     6px 6px 0px LawnGreen;
   transition: all 0.6s ease-in-out;
 }
+
+/* .mr-hide {
+  opacity: 0;
+} */

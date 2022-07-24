@@ -67,7 +67,7 @@ for (let i = 100; i <= 900; i = i + 200) {
       const diceRandomImg = Math.trunc(Math.random() * 3 + 1);
       setTimeout(() => {
         diceImage.classList.add("show-dice-img");
-        diceImage.src = `./images/dice-${diceRandomImg}.png`;
+        diceImage.src = `/assets/images/dice-${diceRandomImg}.png`;
       }, i);
 
       if (diceRandomImg !== 1) {

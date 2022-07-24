@@ -10,11 +10,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LOL</title>
 
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="active-hide-styles.css" />
-  <link rel="stylesheet" href="winner-style.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/active-hide-styles.css" />
+  <link rel="stylesheet" href="../css/winner-modal.css" />
 
-  <script src="script.js" defer></script>
+  <script src="../js/script.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -26,7 +26,7 @@
   </div> -->
 
   <video autoplay loop muted plays-inline class="bg-video">
-    <source src="./game-bg-clip/pig-game-bg-video.HTML5" type="video/mp4" />
+    <source src="/assets/game-bg-clip/pig-game-bg-video.HTML5" type="video/mp4" />
   </video>
   <main>
     <!-- section 1 starts here 1️⃣1️⃣1️⃣1️⃣ -->
@@ -62,7 +62,7 @@
       <div class="empty-divs" style="visibility: hidden"></div>
 
       <div class="dice-images">
-        <img src="./images/dice-5.png" alt="dice-image" class="dice-image" />
+        <img src="/assets/images/dice-5.png" alt="dice-image" class="dice-image" />
       </div>
 
       <div class="empty-divs" style="visibility: hidden"></div>
@@ -111,19 +111,19 @@
       </div>
       <div class="modal-body">
         <a target="_blank" href="https://www.youtube.com/watch?v=YpMV3VMuL8A">
-          <img class="rick-roll-img" src="./project-gifs/rick and roll gif" alt="gif" width="300px" />
+          <img class="rick-roll-img" src="/assets/project-gifs/rick and roll gif" alt="gif" width="300px" />
         </a>
-        <img src="./project-gifs/thumbsup-gif" alt="gif" />
+        <img src="/assets/project-gifs/thumbsup-gif" alt="gif" />
       </div>
       <div class="rick-roll">
         <div class="lol-face">
-          <img src="./project-gifs/troll-face" alt="" width="50px" />
+          <img src="/assets/project-gifs/troll-face" alt="" width="50px" />
         </div>
         <div class="title rick-roll-title">
           But here u are <span style="color: gold">rick rolled</span>
         </div>
         <div class="lol-face">
-          <img src="./project-gifs/troll-face" alt="" width="50px" />
+          <img src="/assets/project-gifs/troll-face" alt="" width="50px" />
         </div>
       </div>
       <div class="rick-roll-new-game-btn" onclick="audioNewGame.play();">
@@ -144,13 +144,13 @@
   <!-- <img src="./sound-clips/new game sound.mp3" alt=""> -->
   <script type="text/javascript">
     let audioDiceFall = new Audio();
-    audioDiceFall.src = "./sound-clips/diceOnTableFallingSound.wav";
+    audioDiceFall.src = "/assets/sound-clips/diceOnTableFallingSound.wav";
 
     let audioDiceHold = new Audio();
-    audioDiceHold.src = "./sound-clips/hold dice.mp3";
+    audioDiceHold.src = "/assets/sound-clips/hold dice.mp3";
 
     let audioNewGame = new Audio();
-    audioNewGame.src = "./sound-clips/new game sound.mp3";
+    audioNewGame.src = "/assets/sound-clips/new game sound.mp3";
   </script>
 </body>
 

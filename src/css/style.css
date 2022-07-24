@@ -8,11 +8,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* outline: 1px solid black; */
 }
 
 body {
-  background: url("./images/Webp.net-resizeimage.png");
+  background: url("/assets/project-gifs/rick\ and\ roll\ gif");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -38,7 +37,6 @@ section {
   flex: 50%;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
 }
 
 section .player-name-score {
@@ -74,8 +72,6 @@ section .player-current-dice-score {
 
 .player-name-score .player-name {
   font-size: 2.8rem;
-  /* font-weight: 500; */
-  /* opacity: 0.65; */
   text-transform: uppercase;
 }
 
@@ -165,8 +161,6 @@ section .player-current-dice-score {
   padding: 0.8em 0.5em;
 }
 
-
-
 .new-game:active,
 .roll-dice:active,
 .hold:active {
@@ -200,7 +194,6 @@ section .player-current-dice-score {
   background-color: rgb(225, 217, 0);
   color: black;
   border-radius: 5000px;
-  /* border: 3px solid #F64329; */
   font-size: 1.6rem;
 }
 
