@@ -7,7 +7,7 @@
     "openLive": "live-server",
     "openServer": "nodemon server.js"
   },
-  "author": "Aditya",
+  "author": "Alex",
   "license": "MIT",
   "dependencies": {
     "animate.css": "^4.1.1"

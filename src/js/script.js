@@ -2,6 +2,7 @@
 // defining var and const values
 let player1Score = document.querySelector(".player1-score");
 let player2Score = document.querySelector(".player2-score");
+let bothPlayerScore = document.querySelector(".player-score");
 const hold = document.querySelector(".hold");
 const player1Bg = document.querySelector(".player1");
 const player2Bg = document.querySelector(".player2");
@@ -21,7 +22,7 @@ const playerSScores = function () {
   player1Score.textContent = Number(0);
   player2Score.textContent = Number(0);
 };
-const playerSCurrentScores = function () {
+const playersCurrentScores = function () {
   player1CurrentScore.textContent = Number(0);
   player2CurrentScore.textContent = Number(0);
 };
@@ -41,20 +42,36 @@ const switchPlayer = () => {
   player2Name.classList.toggle("active-player-name");
   player2Name.classList.toggle("unactive-player-name");
 };
+const winningModal = () => {
+  const modalContainer = document.querySelector("[data-modal-container]");
+
+  const closeModal = function () {
+    modalContainer.classList.remove("show");
+  };
+  const openModal = function () {
+    modalContainer.classList.add("show");
+  };
+
+  modalContainer.classList.add("show");
+
+  document.querySelector(
+    `.title`
+  ).textContent = `Congratulations Player${activePlayer}`;
+
+  modalContainer.addEventListener("click", (e) => {
+    if (e.target !== modalContainer) return;
+    closeModal();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeModal();
+  });
+};
+
 // main functuality starts here
 playerSScores();
-playerSCurrentScores();
+playersCurrentScores();
 diceImage.classList.add("hide-dice-img");
-
-// new game buttons functuality starts here!!!
-newGameBtn.addEventListener("click", () => {
-  activePlayer = 1;
-  playerSScores();
-  playerSCurrentScores();
-  diceImage.classList.add("hide-dice-img");
-  diceImage.classList.remove("show-dice-img");
-  currentScore = 0;
-});
 
 //roll dice functuality starts here
 let currentScore = 0;
@@ -64,7 +81,9 @@ let playing = true;
 for (let i = 100; i <= 900; i = i + 200) {
   rollDice.addEventListener("click", () => {
     if (playing) {
-      const diceRandomImg = Math.trunc(Math.random() * 3 + 1);
+      audioDiceFall.currentTime = 0.1;
+
+      const diceRandomImg = Math.trunc(Math.random() * 6 + 1);
       setTimeout(() => {
         diceImage.classList.add("show-dice-img");
         diceImage.src = `/assets/images/dice-${diceRandomImg}.png`;
@@ -90,47 +109,57 @@ for (let i = 100; i <= 900; i = i + 200) {
   });
 }
 
+//hold dice functuality starts here
 hold.addEventListener("click", () => {
   if (playing) {
+    audioDiceHold.currentTime = 0.07;
+
     scores[activePlayer - 1] += currentScore;
 
     document.querySelector(`.player${activePlayer}-score`).textContent =
       scores[activePlayer - 1];
-    if (scores[activePlayer - 1] >= 1) {
+    if (scores[activePlayer - 1] >= 10) {
       playing = false;
-      document.querySelector(".new-game").removeAttribute("onclick");
-      document.querySelector(".roll-dice").removeAttribute("onclick");
-      document.querySelector(".hold").removeAttribute("onclick");
+      // document.querySelector(".roll-dice").removeAttribute("onclick");
+      // document.querySelector(".hold").removeAttribute("onclick");
 
-      document.querySelector(".dice-images").style.visibility = "hidden";
+      // document.querySelector(".dice-images").style.visibi  lity = "hidden";
 
-      const modalContainer = document.querySelector("[data-modal-container]");
-
-      const closeModal = function () {
-        modalContainer.classList.remove("show");
-      };
-      const openModal = function () {
-        modalContainer.classList.add("show");
-      };
-
-      modalContainer.classList.add("show");
-
-      document.querySelector(
-        `.title`
-      ).textContent = `Congratulations Player${activePlayer}`;
-
-      modalContainer.addEventListener("click", (e) => {
-        if (e.target !== modalContainer) return;
-        closeModal();
-      });
-
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") closeModal();
-      });
+      winningModal();
     } else {
       switchPlayer();
     }
   }
+});
+
+// new game buttons functuality starts here!!!
+newGameBtn.addEventListener("click", () => {
+  playing = true;
+  audioNewGame.currentTime = 0;
+  activePlayer = 1;
+  currentScore = 0;
+  scores = [0, 0];
+  playerSScores();
+  playersCurrentScores();
+  // document.querySelector(".dice-images").style.visibility = "hidden";
+  diceImage.classList.remove("show-dice-img");
+
+  document.querySelector(
+    `.player${activePlayer}-current-dice-score-textContent`
+  ).textContent = Number(0);
+
+
+  setTimeout(() => {
+    player1Bg.classList.remove("unactive-color");
+    player1Bg.classList.add("active-color");
+    player2Bg.classList.add("unactive-color");
+    player2Bg.classList.remove("active-color");
+
+    player1Name.classList.add("active-player-name");
+    player1Name.classList.remove("unactive-player-name");
+    player2Name.classList.remove("active-player-name");
+    player2Name.classList.add("unactive-player-name");
+  }, 100);
 });
 
 // $(window).on("load", function () {
