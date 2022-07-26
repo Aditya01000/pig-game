@@ -111,7 +111,7 @@ img.rick-roll-img {
   left: 0px;
   z-index: 1;
   transform: translateX(-600%);
-  transition: all 5000ms ease-in-out;
+  transition: all 3000ms ease-in-out;
 }
 
 .modal-container.show img.rick-roll-img {
@@ -136,6 +136,7 @@ div.modal-container div.rick-roll {
   align-items: center;
   width: 22%;
   max-height: 50px;
+  cursor: pointer;
 }
 
 .flooper-btn {
@@ -219,8 +220,3 @@ div.modal-container div.rick-roll {
     6px 6px 0px LawnGreen;
   transition: all 0.6s ease-in-out;
 }
-
-/* .mr-hide {
-  opacity: 0;
-  
-} */

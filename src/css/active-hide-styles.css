@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+
 .hide-dice-img {
   transform: scale(0);
 }
@@ -15,12 +17,14 @@
 }
 
 .active-player-name {
-  font-weight: 800;
-  opacity: 0.7;
+  opacity: 0.8;
+  color: #018afe;
+  text-shadow: 3px 3px 2px black;
+  letter-spacing: 5px;
+  font-family: 'Titan One', cursive;
 }
 
 .unactive-player-name {
   font-weight: 500;
   opacity: 0.55;
-
 }
