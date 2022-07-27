@@ -6,6 +6,18 @@
 
 ### here's working version of it: https://pig-game1000.netlify.app
 
+## 🎮 How to play
+
+- You need to roll the dice and player which gets **69 score** or more than it wins the game!
+
+- If you get 1 as a number after rolling dice your current score would be resseted but your score would not be affected.
+
+- You can press **hold** button if u want to pass your turn to other player if you think there's risk of getting number 1 in dice. .
+
+- When you win the game you can press **New Game** button to restart the game again.
+
+- There's a surprise for you after you win the game😉.
+
 ## 🧭 Technologies
 
 - **Javascript** is used to add functionality to this game.
