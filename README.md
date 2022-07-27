@@ -4,6 +4,8 @@
 
 ![Pig Game demo](https://media.giphy.com/media/nv9gzotA7Mn1EQG8nZ/giphy.gif)
 
+### here's working version of it: https://pig-game1000.netlify.app
+
 ## 🧭 Technologies
 
 - **Javascript** is used to add functionality to this game.
