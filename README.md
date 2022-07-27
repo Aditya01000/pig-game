@@ -32,6 +32,16 @@ npm install
 
 💿️ Run this project in live-server with `npm run start` but if you don't have live-server install then it with `npm install -g live-server`
 
+```sh
+npm run start
+```
+
+or
+
+```sh
+npm start
+```
+
 ## 🤗 Contribute
 
 **First- time contributors are welcome** — in fact, this is why I wanted to make it possible to contribute so you can get your first open source contribution.
