@@ -1,16 +1,16 @@
 # Pig Game
 
-[Pig Game](https://pig-game1000.netlify.app) is a computer based game where two players can play together and one who gets 100 score or more than 100 wins the game. This game is dice related game. It's my 3rd frontend project to polish javascript skills.
+[Pig Game](https://pig-game1000.netlify.app) is a computer-based game where two players can play together and one who gets 100 points or more than 100 wins the game. This game is dice related game. It's my 3rd frontend project to polish my javascript skills.
 
 ![Pig Game demo](https://media.giphy.com/media/nv9gzotA7Mn1EQG8nZ/giphy.gif)
 
 ## 🧭 Technologies
 
-- **Javascript** is used to add functionality in this game.
+- **Javascript** is used to add functionality to this game.
 
-- **HTML** is used to make website layout.
+- **HTML** is used to make a website layout.
 
-- **CSS** is used to make user interface look beautiful.
+- **CSS** is used to make the user interface look beautiful.
 
 ## 📜 Setup
 
@@ -28,7 +28,7 @@ git clone git@github.com:Alexander01000/pig-game.git
 npm install
 ```
 
-💿️ Run this project in live-server with `npm run start` but if you dont have live-server install then it with `npm install -g live-server`
+💿️ Run this project in live-server with `npm run start` but if you don't have live-server install then it with `npm install -g live-server`
 
 ```sh
 npm run dev
@@ -36,9 +36,9 @@ npm run dev
 
 ## 🤗 Contribute
 
-**First time contributors are welcome** — in fact this is the reason why I wanted to make it possible to contribute so you can get your first open source contribution.
+**First- time contributors are welcome** — in fact, this is why I wanted to make it possible to contribute so you can get your first open source contribution.
 
-At the end of each post there's a direct link to the **Markdown** file of the post you can edit within GitHub. Read the [contributing guidelines](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors) to learn more.
+Read the [contributing guidelines](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors) to learn more.
 
 ## 🙏 Use Issues to Find Answers
 
