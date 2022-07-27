@@ -193,5 +193,5 @@ modalNewGameBtn.addEventListener("click", () => {
 $(window).on("load", function () {
   setTimeout(() => {
     $(".loader-wrapper").fadeOut("slow");
-  }, 1400);
+  }, 700);
 });

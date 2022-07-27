@@ -1,11 +1,12 @@
 {
-  "name": "pig-game",
+  "name": "Pig Game",
   "version": "1.0.0",
   "description": "Pig Game",
   "main": "script.js",
   "scripts": {
-    "openLive": "live-server",
-    "openServer": "nodemon server.js"
+    "start": "live-server",
+    "openServer": "nodemon server.js",
+    "format":"prettier --write ."
   },
   "author": "Alex",
   "license": "MIT",
