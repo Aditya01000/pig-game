@@ -1,6 +1,6 @@
 # Pig Game
 
-[Pig Game](https://pig-game1000.netlify.app) is a computer-based game where two players can play together and one who gets 100 points or more than 100 wins the game. This game is dice related game. It's my 3rd frontend project to polish my javascript skills.
+[Pig Game](https://pig-game1000.netlify.app) is a computer-based game where two players can play together and one who gets 69 points or more than 69 wins the game. This game is dice related game. It's my 3rd frontend project to polish my javascript skills.
 
 ![Pig Game demo](https://media.giphy.com/media/nv9gzotA7Mn1EQG8nZ/giphy.gif)
 
