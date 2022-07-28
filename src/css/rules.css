@@ -1,0 +1,29 @@
+div.rule-btn {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-100%);
+    background: #ff9900;
+    padding: 0.7em 1em;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.rule-img.show-rule-img .rule-image {
+    left: 5%;
+}
+
+.rule-image {
+    position: absolute;
+    left: -50%;
+    top: 50%;
+    transform: translateY(-55%);
+    z-index: 10;
+    border-radius: 10px;
+    transition: all 500ms ease-in-out;
+}

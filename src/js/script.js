@@ -1,5 +1,7 @@
 "use strict";
 
+const { doc } = require("prettier");
+
 // defining var and const values
 
 let player1Score = document.querySelector(".player1-score");
@@ -189,9 +191,15 @@ modalNewGameBtn.addEventListener("click", () => {
   audioAddCode();
 })
 
+//  rules functuality starts here!!!
+// const ruleBtn = document.querySelector(".rule-btn");
+// ruleBtn.addEventListener("click", () => {
+//   document.querySelector(".rule-img").classList.remove("rule.img")
+// });
 
+// rules end here
 $(window).on("load", function () {
   setTimeout(() => {
     $(".loader-wrapper").fadeOut("slow");
-  }, 700);
+  }, 1);
 });
