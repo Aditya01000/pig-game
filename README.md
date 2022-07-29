@@ -70,3 +70,7 @@ This avoids having to hunt down the issue you have in places like Discord that a
 
 - [@Alexander01000](https://github.com/Alexander01000)
 - [@Alexander20052023](https://github.com/Alexander20052023)
+
+## 💖 Contributors
+
+- [@Axorax](https://github.com/axorax)
