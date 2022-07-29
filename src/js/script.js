@@ -1,6 +1,5 @@
 "use strict";
 
-const { doc } = require("prettier");
 
 // defining var and const values
 
@@ -192,12 +191,23 @@ modalNewGameBtn.addEventListener("click", () => {
 })
 
 //  rules functuality starts here!!!
-// const ruleBtn = document.querySelector(".rule-btn");
-// ruleBtn.addEventListener("click", () => {
-//   document.querySelector(".rule-img").classList.remove("rule.img")
-// });
+const ruleBtn = document.querySelector(".rule-btn");
+ruleBtn.addEventListener("click", () => {
+  document.querySelector(".rule-img").classList.toggle("show-rule-img")
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    document.querySelector(".rule-img").classList.remove("show-rule-img")
+  };
+});
 
 // rules end here
+
+
+
+
+
 $(window).on("load", function () {
   setTimeout(() => {
     $(".loader-wrapper").fadeOut("slow");

@@ -15,12 +15,28 @@ div.rule-btn {
 }
 
 .rule-img.show-rule-img .rule-image {
-    left: 5%;
+    left: 6%;
 }
 
 .rule-image {
     position: absolute;
-    left: -50%;
+    left: -60%;
+    top: 50%;
+    transform: translateY(-55%);
+    z-index: 10;
+    border-radius: 10px;
+    transition: all 500ms ease-in-out;
+}
+
+.rule-img.show-rule-img .esc-rule {
+    left: 450px;
+    top: 20%;
+    font-family: monospace;
+}
+
+.esc-rule {
+    position: absolute;
+    left: -60%;
     top: 50%;
     transform: translateY(-55%);
     z-index: 10;
