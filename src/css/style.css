@@ -121,7 +121,7 @@ section .player-current-dice-score {
   }
 }
 
-.roll-dice-stuff {
+.roll-dice-wrapper {
   position: absolute;
   top: 50%;
   left: 50%;
